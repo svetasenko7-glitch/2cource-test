@@ -14,5 +14,32 @@
       <li><a href="pages/dictionary.html">Словарь</a></li>
       <li><a href="pages/tests.html">Тесты</a></li>
     </ul>
+
+    <!-- сборщик инфы -->
+    <div data-fs-success>Thanks for your submission!</div>
+    <div data-fs-error>Oops! There was a problem submitting your form.</div>
+    <form id="my-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" data-fs-field />
+      <span data-fs-error="email"></span>
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message" data-fs-field />
+      <span data-fs-error="message"></span>
+      <button type="submit" data-fs-submit-btn>Submit</button>
+    </form>
+
+    <!-- оставим внизу -->
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree("initForm", {
+        formElement: "#my-form",
+        formId: "xbglkljv",
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>
