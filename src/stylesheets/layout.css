@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: calc(1vw / 14.4);
+}
+body {
+    font-family: 'PR Root UI', Arial, Helvetica, sans-serif;
+    font-size: 16rem;
+}
+h1, h2, h3 {
+    font-weight: 500;
+}
+
+.article__main {
+    position: relative;
+}
+
+.article__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; 
+}
+.article__header, 
+.article__content {
+    max-width: 720rem;
+    margin: 0 auto;
+    padding: 64rem 48rem;
+}
+
+.article__backlink {
+    color:rgb(54, 52, 52);
+    font-weight: 500;
+    padding: 3rem;
+    transition: color ease 0.2s;
+}
+
+.article__backlink:hover {
+    color: black;
+}
+
+.article__backlink::before {
+    content: '← ';
+}
+
+.article__tags {
+    display: flex;
+    gap: 8rem;
+    flex-wrap: wrap;
+}
+.article__tag {
+    font-size: 13rem;
+    border-radius: 30rem;
+    border: 1 solid #ddd;
+    padding: 6rem 14rem;
+    color: #555;
+    background-color: #f4f4f4;
+}
+
+.article__title {
+    color:#2d2d2d;
+    margin-top: 16rem;
+    font-size: 64rem;
+}
+
+.article__lead{
+    font-size: 26rem;
+    line-height: 1.5;
+    color: #5c5c5c;
+    margin-top: 12rem;
+    max-width: 700rem;
+}
+
+.article__image{
+    width: 100%;
+    max-width: 520rem;
+    margin: auto;
+    display: block;
+    border-radius: 20rem;
+}
+
+.article__content--header{
+    font-size: 32rem;
+    color: #151515;
+    margin: 48rem 0;
+}
+
+.article__content--text, 
+.article__content--list {
+    line-height: 1.7;
+    margin-bottom: 16rem;
+}
+
+.article__content--heading{
+    font-size: 24rem;
+    margin:  36rem 0 16rem;
+}
+
+.article__content--list{
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    margin-bottom: 24rem;
+    max-width: 720rem;
+
+}
+.article__content--list span {
+    font-weight: 500;
+}
+.article__content--list li {
+    list-style-type: disc;
+}
+
+.article__info {
+    width: 300rem;
+    background-color: rgba(127, 255, 212, 0.424);
+    backdrop-filter: blur(3px);
+    border: 1rem solid rgb(23, 112, 83);
+    border-radius: 18rem;
+    padding: 18rem 20rem;
+    position: sticky;
+    top: 100rem;
+   margin: 64rem 64rem 0 0;
+}
+
+.article__info--stroke{
+    display: flex;
+    width: 100%;
+}
+
+.article__info--stroke p:nth-of-type(1){
+    width: 38%;
+}
+.article__info--wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 18rem;
+     display: flex;
+    flex-direction: column;
+    font-size: 13rem;
+}
