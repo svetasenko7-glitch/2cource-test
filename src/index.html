@@ -73,7 +73,7 @@
       <p class="menu__footer">Учебный проект "Цветочный"</p>
     </div>
 
-    <section class="hero">
+    <section class="hero theme">
       <div class="hero__inner">
         <p class="hero__eyebrow">
           учебный проект / 2 курс / "Дизайн и программирование"
@@ -93,11 +93,134 @@
       </div>
       <div class="hero__bottom">
         <p class="hero__text">
-          Медиа о растениях, цветах и тех, кто их выращивает. Мы еще поливаем
-          первые ростки, скоро здесь все расцветет.
+          Медиа о&nbsp;растениях, цветах и&nbsp;тех,
+          кто&nbsp;их&nbsp;выращивает. <br />
+          Мы еще поливаем первые ростки.
         </p>
 
+        <a href="#about" class="hero__badge">
+          <span class="bedge__center">✿</span>
+          <svg class="bedge__ring" viewBox="0 0 200 200">
+            <defs>
+              <path
+                id="badge-circle"
+                d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"
+              />
+            </defs>
+            <text class="bedge__text">
+              <textPath href="#badge-circle">
+                скоро открытие ✿ скоро открытие ✿ скоро открытие ✿
+              </textPath>
+            </text>
+          </svg>
+        </a>
+
         <a href="#about" class="hero__scroll"> листайте</a>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee__row">
+        <p class="marquee__track">
+          <span class="marquee__item">флористика</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item marquee__item--accent">зеленый дом</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item">уход за растениями</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item marquee__item--accent">язык цветов</span>
+          <span class="marquee__flower">✿</span>
+        </p>
+        <p class="marquee__track">
+          <span class="marquee__item">флористика</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item marquee__item--accent">зеленый дом</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item">уход за растениями</span>
+          <span class="marquee__flower">✿</span>
+          <span class="marquee__item marquee__item--accent">язык цветов</span>
+          <span class="marquee__flower">✿</span>
+        </p>
+      </div>
+      <div class="marquee__row">
+        <p class="marquee__track">
+          <span class="marquee__item">свежие статьи</span>
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item marquee__item--accent"
+            >скоро открытие</span
+          >
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item">комнатные джунгли</span>
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item marquee__item--accent"
+            >грунт и удобрения</span
+          >
+          <span class="marquee__flower">❊</span>
+        </p>
+        <p class="marquee__track">
+          <span class="marquee__item">свежие статьи</span>
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item marquee__item--accent"
+            >скоро открытие</span
+          >
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item">комнатные джунгли</span>
+          <span class="marquee__flower">❊</span>
+          <span class="marquee__item marquee__item--accent"
+            >грунт и удобрения</span
+          >
+          <span class="marquee__flower">❊</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section form theme theme--pink">
+      <div class="section__head">
+        <p class="section__label">На связи</p>
+        <p class="section__note">без спама</p>
+      </div>
+
+      <div class="form__grid">
+        <div>
+          <h2 class="form__title">Оставайтесь на&nbsp;связи</h2>
+          <p class="form__text">
+            Напишите нам — пришлем письмо, как только откроемся,
+            и&nbsp;поделимся первыми статьями. Без спама, только
+            наши&nbsp;материалы
+          </p>
+        </div>
+
+        <form id="my-form" class="form__wrapper">
+          <div class="form__field">
+            <input
+              class="form__input"
+              type="text"
+              id="message"
+              name="message"
+              data-fs-field
+              placeholder=""
+            />
+            <label class="form__label" for="message">Как вас зовут</label>
+            <span data-fs-error="message"></span>
+          </div>
+
+          <div class="form__field">
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="email"
+              data-fs-field
+              placeholder=""
+            />
+            <label class="form__label" for="email">Email</label>
+            <span data-fs-error="email"></span>
+          </div>
+
+          <button type="submit" data-fs-submit-btn class="button">
+            Отправить
+          </button>
+        </form>
       </div>
     </section>
 
@@ -113,15 +236,7 @@
   
     <div data-fs-success>Thanks for your submission!</div>
     <div data-fs-error>Oops! There was a problem submitting your form.</div>
-    <form id="my-form">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" data-fs-field />
-      <span data-fs-error="email"></span>
-      <label for="message">Message:</label>
-      <input type="text" id="message" name="message" data-fs-field />
-      <span data-fs-error="message"></span>
-      <button type="submit" data-fs-submit-btn>Submit</button>
-    </form>
+    
 
   
     <script>
