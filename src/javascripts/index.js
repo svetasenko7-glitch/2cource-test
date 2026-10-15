@@ -1,6 +1,8 @@
 burgerMenu ()
 splitText ()
+headerScroll()
 
+// анимация бургерного меню
 function burgerMenu() {
     let burger = document.querySelector('.header__burger');
     let menu = document.querySelector('.menu');
@@ -24,6 +26,7 @@ function burgerMenu() {
     });
 }
 
+// анимация букв у текста hero
 function splitText() {
     let elements = document.querySelectorAll('.split');
 
@@ -55,4 +58,29 @@ function splitText() {
 
         el.innerHTML = html;
     });
+}
+
+// анимация состояний верхнего меню, возникновение и исчезание
+function headerScroll() {
+    let header = document.querySelector('.header')
+    let lastScroll = 0
+
+    window.addEventListener('scroll', () =>{
+        let scroll = window.scrollY
+
+        if (scroll > 20) {
+            header.classList.add('header--scrolled')
+        }
+        else{
+            header.classList.remove('header--scrolled')
+        }
+
+        if (scroll > 160 && scroll > lastScroll) {
+            header.classList.add('header--hidden')
+        }
+        else{
+            header.classList.remove('header--hidden')
+        }
+        lastScroll = scroll
+    })
 }
