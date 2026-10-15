@@ -49,7 +49,7 @@ function pageChunksPlugin() {
 
 export default defineConfig(({ command }) => ({
   root,
-  base: command === 'build' ? '/' : '/',
+  base: command === 'build' ? '' : '',
   plugins: [pageChunksPlugin()],
   build: {
     outDir,
