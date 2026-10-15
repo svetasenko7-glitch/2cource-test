@@ -24,21 +24,24 @@ const chunksByFile = Object.fromEntries(
 function pageChunksPlugin() {
   return {
     name: 'page-chunks',
-    transformIndexHtml(html, ctx) {
-      const relFile = path
-        .relative(root, ctx.filename)
-        .split(path.sep)
-        .join('/')
-      const chunks = chunksByFile[relFile]
-      if (!chunks) return html
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html, ctx) {
+        const relFile = path
+          .relative(root, ctx.filename)
+          .split(path.sep)
+          .join('/')
+        const chunks = chunksByFile[relFile]
+        if (!chunks) return html
 
-      return {
-        html,
-        tags: chunks.map((src) => ({
-          tag: 'script',
-          attrs: { type: 'module', src },
-          injectTo: 'body'
-        }))
+        return {
+          html,
+          tags: chunks.map((src) => ({
+            tag: 'script',
+            attrs: { type: 'module', src },
+            injectTo: 'body'
+          }))
+        }
       }
     }
   }
